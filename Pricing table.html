@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Animated Pricing Table</title>
+
+<style>
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
+
+body {
+  background: #0f172a;
+  color: white;
+  padding: 60px 20px;
+  text-align: center;
+}
+
+h1 {
+  margin-bottom: 50px;
+  font-size: 32px;
+}
+
+.pricing-container {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  flex-wrap: wrap;
+}
+
+.card {
+  background: #1e293b;
+  width: 280px;
+  padding: 30px 20px;
+  border-radius: 10px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.3);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  position: relative;
+}
+
+.card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 20px 35px rgba(0,0,0,0.5);
+}
+
+.card h2 {
+  margin-bottom: 15px;
+}
+
+.price {
+  font-size: 36px;
+  margin: 20px 0;
+  font-weight: bold;
+}
+
+ul {
+  list-style: none;
+  margin-bottom: 25px;
+}
+
+ul li {
+  margin: 10px 0;
+  font-size: 14px;
+  color: #cbd5e1;
+}
+
+button {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  background: #0ea5e9;
+  color: white;
+  cursor: pointer;
+  transition: background 0.3s ease, transform 0.3s ease;
+}
+
+button:hover {
+  background: #0284c7;
+  transform: scale(1.05);
+}
+
+/* Most Popular Plan */
+.popular {
+  border: 2px solid #0ea5e9;
+}
+
+.badge {
+  position: absolute;
+  top: -12px;
+  right: 20px;
+  background: #0ea5e9;
+  color: white;
+  padding: 5px 10px;
+  font-size: 12px;
+  border-radius: 20px;
+  font-weight: bold;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .pricing-container {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+</style>
+
+</head>
+<body>
+
+<h1>Pricing Plans</h1>
+
+<div class="pricing-container">
+
+  <div class="card">
+    <h2>Basic</h2>
+    <div class="price">$19/mo</div>
+    <ul>
+      <li>✔ 5 Projects</li>
+      <li>✔ Email Support</li>
+      <li>✔ Basic Features</li>
+    </ul>
+    <button>Choose Plan</button>
+  </div>
+
+  <div class="card popular">
+    <div class="badge">Most Popular</div>
+    <h2>Pro</h2>
+    <div class="price">$49/mo</div>
+    <ul>
+      <li>✔ 20 Projects</li>
+      <li>✔ Priority Support</li>
+      <li>✔ Advanced Features</li>
+    </ul>
+    <button>Choose Plan</button>
+  </div>
+
+  <div class="card">
+    <h2>Enterprise</h2>
+    <div class="price">$99/mo</div>
+    <ul>
+      <li>✔ Unlimited Projects</li>
+      <li>✔ 24/7 Support</li>
+      <li>✔ Dedicated Manager</li>
+    </ul>
+    <button>Choose Plan</button>
+  </div>
+
+</div>
+
+</body>
+</html>
